@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my store</title>
+    <link rel="stylesheet" href="/stayle.css">
+</head>
+
+<body>
+    <aside>
+        <h1>Hi <span id="hiUser"></span></h1>
+        <div id="searchSettings">
+            <h3>Search Settings</h3>
+            <form action="javascript:void(0);" onsubmit="search()">
+                <input type="text" id="search_text"></br>
+                <select id="search_category">
+                    <option></option>
+                    <option>food</option>
+                    <option>baby</option>
+                    <option>shoes</option>
+                </select></br>
+                <input type="number" id="min_price" placeholder="min price" value="0"></br>
+                <input type="number" id="max_price" placeholder="max price" value="1000000"></br>
+                <input type="submit" value="Search">
+            </form>
+
+            <div id="managerSearch">
+                <input type="button" value="Search Out Of Stock" onclick="searchOutOfStock()"></br>
+                <input type="button" value="Search Close Out Of Stock" onclick="searchCloseOutOfStock()">
+            </div>
+
+            <input type="button" value="Restart Search Setting" onclick="restartSettings()">
+        </div>
+    </aside>
+    <article>
+        <div id="addProduct">
+            <h3>Add Product</h3>
+            <form action="javascript:void(0);" onsubmit="addProduct()">
+                <input type="text" id="add_name" placeholder="New Product" required></br>
+                <select id="category">
+                    <option>food</option>
+                    <option>baby</option>
+                    <option>shoes</option>
+                </select required></br>
+                <input type="number" id="add_price" placeholder="price" required></br>
+                <input type="number" id="add_quantity" placeholder="quantity" required></br>
+                <input type="submit" value="Add">
+            </form>
+        </div>
+
+        <div id="editProduct">
+            <h3>Edit Product</h3>
+            <form action="javascript:void(0);" onsubmit="editProduct()">
+                <input type="hidden" id="edit_id">
+                <label>name:</label></br><input type="text" id="edit_name"></br>
+                <label>category:</label></br><input type="text" id="edit_category"></br>
+                <label>price:</label></br><input type="number" id="edit_price"></br>
+                <label>quantity:</label></br><input type="number" id="edit_quantity"></br>
+                <input type="submit" value="Edit">
+                <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+            </form>
+        </div>
+
+        <div id="allProduct"></div>
+    </article>
+
+    <script src="js/producet.js"></script>
+    <script src="js/Store.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

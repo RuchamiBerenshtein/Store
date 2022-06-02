@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    background-color: rgb(102, 190, 190);
+}
+
+#login {
+    background-color: white;
+    padding: 40px;
+    position: absolute;
+    top: calc(50vh - 113.5px);
+    text-align: center;
+}
+
+input {
+    color: brown;
+    margin: 6px;
+    width: 300px;
+    height: 30px;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: brown;
+}
+
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: brown;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: brown;
+    cursor: pointer;
+}
+
+select {
+    color: brown;
+    margin: 6px;
+    width: 300px;
+    height: 30px;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
