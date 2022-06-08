@@ -15,14 +15,14 @@ const visibleProduct = () => {
 }
 
 const orderProduct = () => {
-    if (p.divide(document.getElementById('orderQuanity').value.trim())) {
-        alert(`you ordered ${document.getElementById('orderQuanity').value.trim()} parts of ${product.productName}`)
+    if (p.divide(document.getElementById('orderQuantity').value.trim())) {
+        alert(`you ordered ${document.getElementById('orderQuantity').value.trim()} parts of ${product.productName}`)
         products.find(p => p.productId === code).quantity = p.quantity;
         saveToStorage();
     }
     else {
-        alert(`we are sory!
-        but we havn't enghuf ${product.productName} for you`)
+        alert(`we are sori!
+        but we haven't enough ${product.productName} for you`)
     }
     location.href = "main.html";
 }
